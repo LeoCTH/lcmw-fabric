@@ -1,0 +1,38 @@
+{
+    "item.lcmw.glock_full_mod": "Glock 18 Full-Mod",
+    "tooltip.lcmw.glock_full_mod.desc1": "My favourite §bautomatic §fGlock modded with",
+    "tooltip.lcmw.glock_full_mod.desc2": "a §6silencer§f, a §adrum§f, a §cred dot sight§f,",
+    "tooltip.lcmw.glock_full_mod.desc3": "a §bforegrip§f and a §bfolding stock§f.",
+    "tooltip.lcmw.glock_full_mod.witty1": "§7§oHow the fank did this mount to that thing?",
+
+    "item.lcmw.deagle": "Desert Eagle",
+    "tooltip.lcmw.deagle.desc1": "Powerful semi automatic pistol",
+    "tooltip.lcmw.deagle.desc2": "that fires §6.50 AE§r rounds, and is",
+    "tooltip.lcmw.deagle.desc3": "capable of neutralizing enemies with",
+    "tooltip.lcmw.deagle.desc4": "a single shot to the head.",
+    "tooltip.lcmw.deagle.witty1": "§7§oMind your wrist bone",
+
+    "item.lcmw.awp": "AWP",
+    "tooltip.lcmw.awp.desc1": "§oOne shot, one kill. §rChambered for §6.338 Lapua",
+    "tooltip.lcmw.awp.desc2": "§6Magnum §rrounds, this British-made bolt-action sniper",
+    "tooltip.lcmw.awp.desc3": "rifle is capable of neutralizing opponents instantly",
+    "tooltip.lcmw.awp.desc4": "from an extremely long distance.",
+    "tooltip.lcmw.awp.witty1": "§7§oBoom, headshot!",
+
+    "text.lcmw.ammo": "< %s | %s [%s] >",
+    "text.lcmw.outofammo": "< §c§lOUT OF AMMO§r >",
+    "text.lcmw.reloading": "< RELOADING... | %s >",
+
+    "key.lcmw.action": "Actions",
+    "key.lcmw.reload": "Reload",
+    "key.lcmw.switch_firemode": "Switch Fire Mode",
+
+    "firemode.lcmw.safe": "Safe",
+    "firemode.lcmw.single": "Single",
+    "firemode.lcmw.burst": "Burst",
+    "firemode.lcmw.auto": "Auto",
+
+    "death.lcmw.lethalweaponry": "%1$s was shot by %2$s",
+    "death.lcmw.lethalweaponry.anon": "%1$s got hit by a stray bullet",
+    "death.lcmw.lethalweaponry.item": "%1$s was shot by %2$s with %3$s"
+}

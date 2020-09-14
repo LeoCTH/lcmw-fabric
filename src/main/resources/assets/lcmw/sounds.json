@@ -1,0 +1,16 @@
+{
+    "item.deagle.equip":    {"sounds": [ "lcmw:deagle/equip"        ]},
+    "item.deagle.fire":     {"sounds": [ "lcmw:deagle/fire"         ]},
+    "item.deagle.reload":   {"sounds": [ "lcmw:deagle/reload"       ]},
+
+    "item.glock.equip":     {"sounds": [ "lcmw:glock/equip"         ]},
+    "item.glock.fire":      {"sounds": [ "lcmw:glock/fire"          ]},
+    "item.glock.reload":    {"sounds": [ "lcmw:glock/reload"        ]},
+    "item.glock.burst":     {"sounds": [ "lcmw:glock/burst"         ]},
+    "item.glock.selectfire":{"sounds": [ "lcmw:glock/selectfire"    ]},
+
+    "item.awp.equip":       {"sounds": [ "lcmw:awp/equip"           ]},
+    "item.awp.fire":        {"sounds": [ "lcmw:awp/fire"            ]},
+    "item.awp.reload":      {"sounds": [ "lcmw:awp/reload"          ]},
+    "item.awp.scope":       {"sounds": [ "lcmw:awp/scope"           ]}
+}

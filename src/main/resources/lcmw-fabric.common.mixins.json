@@ -1,0 +1,13 @@
+{
+    "required": true,
+    "minVersion": "0.8",
+    "package": "com.leocth.lcmw.fabric.common.mixin",
+    "compatibilityLevel": "JAVA_8",
+    "mixins": [
+        "LivingEntityMixin",
+        "SoundEventAccessor"
+    ],
+    "injectors": {
+        "defaultRequire": 1
+    }
+}

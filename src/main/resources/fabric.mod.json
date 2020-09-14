@@ -1,0 +1,31 @@
+{
+    "schemaVersion": 1,
+    "id": "lcmw",
+    "version": "${version}",
+    "name": "LCMW-Fabric",
+    "description": "More weapons than you will ever need.",
+    "authors": [
+        "leocth"
+    ],
+    "contact": {},
+    "license": "MIT",
+    "icon": "assets/lcmw/icon.png",
+    "environment": "*",
+    "entrypoints": {
+        "main": [
+            "com.leocth.lcmw.fabric.common.LCMWFabric"
+        ],
+        "client": [
+            "com.leocth.lcmw.fabric.client.LCMWFabricClient"
+        ]
+    },
+    "mixins": [
+        "lcmw-fabric.client.mixins.json",
+        "lcmw-fabric.common.mixins.json"
+    ],
+    "depends": {
+        "fabricloader": ">=0.9.3+build.207",
+        "fabric": "*",
+        "minecraft": "1.16.2"
+    }
+}

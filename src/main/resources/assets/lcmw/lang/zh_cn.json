@@ -1,0 +1,38 @@
+{
+  "item.lcmw.glock_full_mod": "格洛克18全魔改",
+  "tooltip.lcmw.glock_full_mod.desc1": "我最得心应手的§b全自动§f格洛克",
+  "tooltip.lcmw.glock_full_mod.desc2": "改装件，加装了§6延长消音器§f、§a弹鼓§f、",
+  "tooltip.lcmw.glock_full_mod.desc3": "§c红点瞄准镜§f、§b前握把§f与§b折叠枪托。",
+  "tooltip.lcmw.glock_full_mod.witty1": "§7§o这他娘是怎么装上去的？？",
+
+  "item.lcmw.deagle": "沙漠之鹰",
+  "tooltip.lcmw.deagle.desc1": "强力的半自动手枪，发射",
+  "tooltip.lcmw.deagle.desc2": "§6.50 AE§f子弹，无论遇",
+  "tooltip.lcmw.deagle.desc3": "到多么难缠的敌人，一发直击",
+  "tooltip.lcmw.deagle.desc4": "头部的子弹都能瞬间解决战斗。",
+  "tooltip.lcmw.deagle.witty1": "§7§o掀起你的手腕骨~（物理",
+
+  "item.lcmw.awp": "AWP狙击步枪",
+  "tooltip.lcmw.awp.desc1": "§o一枪一个。§r这把英制的栓",
+  "tooltip.lcmw.awp.desc2": "动狙击步枪使用§6.338 Lapua§r",
+  "tooltip.lcmw.awp.desc3": "§6Magnum 子弹，使其能够精准",
+  "tooltip.lcmw.awp.desc4": "击毙数千米开外的敌人。",
+  "tooltip.lcmw.awp.witty1": "§7§oBoom, headshot!",
+
+  "text.lcmw.ammo": "< %s | %s [%s] >",
+  "text.lcmw.outofammo": "< §c§l弹药耗尽§r >",
+  "text.lcmw.reloading": "< 换弹中... | %s >",
+
+  "key.lcmw.action": "操作",
+  "key.lcmw.reload": "换弹",
+  "key.lcmw.switch_firemode": "切换开火模式",
+
+  "firemode.lcmw.safe": "保险",
+  "firemode.lcmw.single": "单发",
+  "firemode.lcmw.burst": "连发",
+  "firemode.lcmw.auto": "自动",
+
+  "death.lcmw.lethalweaponry": "%2$s射杀了%1$s",
+  "death.lcmw.lethalweaponry.anon": "%1$s被流弹击毙",
+  "death.lcmw.lethalweaponry.item": "%2$s使用%3$s射杀了%1$s"
+}

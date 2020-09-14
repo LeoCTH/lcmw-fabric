@@ -1,0 +1,13 @@
+{
+    "required": true,
+    "minVersion": "0.8",
+    "package": "com.leocth.lcmw.fabric.client.mixin",
+    "compatibilityLevel": "JAVA_8",
+    "client": [
+        "MinecraftClientMixin",
+        "HeldItemRendererMixin"
+    ],
+    "injectors": {
+        "defaultRequire": 1
+    }
+}

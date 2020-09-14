@@ -1,0 +1,66 @@
+     __           ______    __      __  __      __      __
+    |  |        /  _____)  |  \    /  | \ \    /  \    / /
+    |  |       |  /        |   \  /   |  \ \  / /\ \  / /
+    |  |       | |         | |\ \/ /| |   \ \/ /  \ \/ /
+    |  |_____  |  \_____   | | \__/ | |    \  /    \  /      
+    |________|  \_______)  |_|      |_|     \/      \/   v1.0 
+
+Roadmap for LCMW:
+    - Base Architecture (X)
+        - FireManager, AmmoBank, Peripherals <-> Weapon <-> ItemStack
+    - Weapon Models (X) 2/2
+    - Physics
+        - Hitscan (X)
+        - Projectile ( )
+    - Weapon Sounds ( )
+        - /!\ WAITING FOR PROPER SOUNDS
+    - UI ( )
+        - distributed OOP?
+        - unified display?
+    - Animations ( )
+        - first person animator ( )
+        - third person animator ( )
+        - item model animator   ( )
+        - animation system?
+    - API ( )
+        - what belongs to the API and what doesn't?
+        - documentation?
+        - data-driven??? (:jsonthonk:)
+    - Release v1.0  \o/ (hopefully)
+
+TODO/Priority Queue:
+    - sort out peripherals (scopes, laser sights, foregrips, ...)
+    - UI
+    - animation
+    - API
+    - sounds
+
+Technical Hurdles:
+    - Minecraft runs @ 20 tps normally
+        Limits:
+            - Laggy and inconsistent projectile physics
+            - No precise trigger delays/any sort of imitation for rate of fire
+        Implementation notes:
+            - Hardcoded behavior
+            - Minecraft timing relies on ticks, random ticks, redstone, ...
+                - separate handling of physics?????
+    - Animation and compressed element formats while maintaining backwards compatability with vanilla models
+        Limits:
+            - Angles limited to multiples of 22.5 (22.5, 45, -22.5, -45)
+            - No animation (with separate moving parts) capabilities
+        Implementation notes:
+            - obvious viable option: create new model format based on the vanilla model format
+                - with additional fields denoting animated elements
+                    - oh no animation paths defined in json
+                - compressed model formats (json sucks)
+                    - possible solution: marker with parent
+                        vanilla behavior: ignores marker and use parent (backwards compat)
+                        custom behavior: if marker is present then use new format (yay mission accomplished)
+                - /!\ needs a bunch of rendering black magic
+                    - uh /shrug
+    
+
+    
+    
+        
+
