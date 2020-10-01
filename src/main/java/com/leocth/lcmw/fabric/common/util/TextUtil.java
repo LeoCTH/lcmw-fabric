@@ -12,26 +12,29 @@ public final class TextUtil {
 
     private TextUtil() {}
 
-    public static String composeString(String category, String... pieces) {
-        StringBuilder keyBuilder = new StringBuilder(category);
-        keyBuilder.append('.');
-        keyBuilder.append(LCMWFabric.MODID);
-        keyBuilder.append('.');
+    public static String composeString(String first, String... pieces) {
+        StringBuilder keyBuilder = new StringBuilder(first);
         for (int i = 0; i < pieces.length; i++) {
+            keyBuilder.append('.');
             keyBuilder.append(pieces[i]);
-            if (i < pieces.length - 1)
-                keyBuilder.append('.');
         }
         return keyBuilder.toString();
     }
 
-    public static TranslatableText makeTranslatableText(String category, String... pieces) {
-        return new TranslatableText(composeString(category, pieces));
+    public static TranslatableText makeTranslatableText(String category, String namespace, String... pieces) {
+        String[] args = new String[pieces.length + 1];
+        args[0] = namespace;
+        System.arraycopy(pieces, 0, args, 1, pieces.length);
+        return new TranslatableText(composeString(category, args));
+    }
+
+    public static TranslatableText makeTranslatableTextDefaultedId(String category, String... pieces) {
+        return makeTranslatableText(category, LCMWFabric.MODID, pieces);
     }
 
     public static void appendTooltips(List<Text> list, String id, String category, int lines) {
         for (int i = 0; i < lines; i++) {
-            list.add(makeTranslatableText("tooltip", id, category + (i + 1)));
+            list.add(makeTranslatableTextDefaultedId("tooltip", id, category + (i + 1)));
         }
     }
 

@@ -14,7 +14,7 @@ public class FireMode {
     public FireMode(int shots, boolean heldDown, String id) {
         this.shots = shots;
         this.heldDown = heldDown;
-        this.displayText = TextUtil.makeTranslatableText("firemode", id);
+        this.displayText = TextUtil.makeTranslatableTextDefaultedId("firemode", id);
     }
 
     public static FireMode burst(int shots) {

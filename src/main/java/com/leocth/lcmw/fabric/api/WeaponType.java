@@ -8,6 +8,7 @@ import com.leocth.lcmw.fabric.common.util.physics.hitscan.HitscanArgs;
 import com.leocth.lcmw.fabric.common.fire.SimpleHitscanFireManager;
 import net.minecraft.nbt.CompoundTag;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -31,7 +32,7 @@ public class WeaponType {
 
         AmmoBank ammoBank;
         FireManager fireManager;
-        List<FireMode> fireModes = Lists.newArrayList();
+        List<FireMode> fireModes = new ArrayList<>();
 
         public Builder ammoBank(AmmoBank bank) {
             this.ammoBank = bank;

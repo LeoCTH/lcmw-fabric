@@ -1,10 +1,12 @@
 package com.leocth.lcmw.fabric.common.item;
 
+import com.google.common.collect.ImmutableList;
 import com.leocth.lcmw.fabric.api.WeaponType;
 import com.leocth.lcmw.fabric.common.ammo.FixedAmmoBank;
 import com.leocth.lcmw.fabric.common.network.S2CPackets;
 import com.leocth.lcmw.fabric.common.util.*;
 import com.leocth.lcmw.fabric.api.Weapon;
+import net.minecraft.client.item.TooltipContext;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
@@ -16,18 +18,31 @@ import net.minecraft.text.TranslatableText;
 import net.minecraft.util.Hand;
 import net.minecraft.world.World;
 import org.apache.commons.lang3.StringUtils;
+import org.jetbrains.annotations.Nullable;
+
+import java.util.List;
 
 public class WeaponItem extends Item implements TriggerOnAttack, Reloadable, IgnoreNbt {
 
     protected final WeaponType weaponType;
     protected final SoundEvent fireSound;
     protected final SoundEvent reloadSound;
+    protected final List<Text> tooltip;
 
-    public WeaponItem(Settings settings, WeaponType weapon, SoundEvent fireSound, SoundEvent reloadSound) {
+    public WeaponItem(Settings settings, WeaponType weapon, SoundEvent fireSound, SoundEvent reloadSound, List<Text> tooltip) {
         super(settings);
         this.weaponType = weapon;
         this.fireSound = fireSound;
         this.reloadSound = reloadSound;
+        this.tooltip = ImmutableList.copyOf(tooltip);
+    }
+
+    public WeaponItem(Settings settings, WeaponType weapon, SoundEvent fireSound, SoundEvent reloadSound, TooltipBuilder builder) {
+        super(settings);
+        this.weaponType = weapon;
+        this.fireSound = fireSound;
+        this.reloadSound = reloadSound;
+        this.tooltip = builder.construct();
     }
 
     public WeaponType getWeaponType() {
@@ -139,6 +154,12 @@ public class WeaponItem extends Item implements TriggerOnAttack, Reloadable, Ign
 
     public Weapon getWeapon(ItemStack stack) {
         return weaponType.construct(stack.getOrCreateTag());
+    }
+
+    @Override
+    public void appendTooltip(ItemStack stack, @Nullable World world, List<Text> tooltip, TooltipContext context) {
+        super.appendTooltip(stack, world, tooltip, context);
+        tooltip.addAll(this.tooltip);
     }
 
     protected void applyChanges(Weapon weapon, ItemStack stack) {

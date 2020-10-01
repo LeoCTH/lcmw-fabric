@@ -1,5 +1,6 @@
 package com.leocth.lcmw.fabric.common.ammo;
 
+import com.google.common.collect.ImmutableList;
 import com.google.common.collect.Lists;
 import com.leocth.lcmw.fabric.api.AmmoBank;
 import com.leocth.lcmw.fabric.common.util.ReloadProgress;
@@ -8,6 +9,8 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.CompoundTag;
 
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 // this entire thing is a huge todo rn
@@ -17,7 +20,7 @@ public class ItemBasedAmmoBank extends AmmoBank {
     private List<Item> acceptedAmmoItems;
 
     public ItemBasedAmmoBank(ItemStack stack, Item... acceptedAmmoItems) {
-        this.acceptedAmmoItems = Lists.newArrayList(acceptedAmmoItems);
+        this.acceptedAmmoItems = ImmutableList.copyOf(acceptedAmmoItems);
         CompoundTag tag = stack.getOrCreateSubTag("IBAmmoBank");
         ItemStack ammoStack = ItemStack.fromTag(tag.getCompound("Item"));
         if (this.acceptedAmmoItems.contains(ammoStack.getItem())) {
